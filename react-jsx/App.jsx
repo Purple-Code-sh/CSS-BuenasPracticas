@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    document.body.className = isDarkTheme ? "dark-theme" : "";
+  }, [isDarkTheme]);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
   return (
     <div className="container">
       <header>
@@ -22,6 +32,9 @@ function App() {
             </li>
           </ul>
         </nav>
+        <button id="theme-toggle" onClick={toggleTheme}>
+          Cambiar Tema
+        </button>
       </header>
 
       <main>

@@ -2,7 +2,15 @@
   --base-font-size: 16px;
   --scale-factor: 1;
 
-  /* Nuevas propiedades */
+  /* Colores para tema claro */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #f4f4f4;
+  --article-bg: #ffffff;
+  --aside-bg: #f9f9f9;
+  --footer-bg: #333333;
+  --footer-text: #ffffff;
+
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,16 +23,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  font-size: var(--base-font-size);
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --header-bg: #2a2a2a;
+  --article-bg: #2a2a2a;
+  --aside-bg: #333333;
+  --footer-bg: #1a1a1a;
+  --footer-text: #e0e0e0;
 }
 
 body {
-  /* Removemos font-family de aquí ya que ahora está en :root */
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  font-size: var(--base-font-size);
 }
 
 .container {
@@ -35,7 +51,7 @@ body {
 }
 
 header {
-  background-color: #f4f4f4;
+  background-color: var(--header-bg);
   padding: calc(1rem * var(--scale-factor)) 0;
 }
 
@@ -64,7 +80,7 @@ nav ul li {
 nav a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   font-size: calc(1rem * var(--scale-factor) + 0.5vw);
 }
 
@@ -78,7 +94,7 @@ main {
 article {
   flex: 1 1 calc(300px * var(--scale-factor));
   min-width: calc(250px * var(--scale-factor));
-  background-color: #fff;
+  background-color: var(--article-bg);
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: calc(1.5rem * var(--scale-factor));
   border-radius: 5px;
@@ -91,69 +107,80 @@ article p {
 aside {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   flex: 0 1 calc(250px * var(--scale-factor));
-  background-color: #f9f9f9;
+  background-color: var(--aside-bg);
   padding: calc(1.5rem * var(--scale-factor));
   border-radius: 5px;
 }
 
 footer {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
   padding: calc(1rem * var(--scale-factor));
   font-size: calc(0.9rem * var(--scale-factor) + 0.2vw);
 }
 
+#theme-toggle {
+  padding: 10px 15px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
 /* Media queries se mantienen igual */
 @media (max-width: 1200px) {
   :root {
-    --scale-factor: 0.95;
+      --scale-factor: 0.95;
   }
 }
 
 @media (max-width: 992px) {
   :root {
-    --scale-factor: 0.9;
+      --scale-factor: 0.9;
   }
   
   .container {
-    width: 95vw;
+      width: 95vw;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --scale-factor: 0.85;
+      --scale-factor: 0.85;
   }
 
   nav ul li {
-    display: block;
-    margin-bottom: calc(0.5rem * var(--scale-factor));
+      display: block;
+      margin-bottom: calc(0.5rem * var(--scale-factor));
   }
 
   main {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   aside {
-    order: -1;
+      order: -1;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --scale-factor: 0.8;
+      --scale-factor: 0.8;
   }
 
   .container {
-    width: 100vw;
-    padding: 0 calc(0.5rem * var(--scale-factor));
+      width: 100vw;
+      padding: 0 calc(0.5rem * var(--scale-factor));
   }
 }
 
 @media (min-width: 1800px) {
   :root {
-    --scale-factor: 1.1;
+      --scale-factor: 1.1;
   }
 }

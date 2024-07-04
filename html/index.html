@@ -18,6 +18,7 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle">Cambiar Tema</button>
         </header>
 
         <main>
@@ -44,5 +45,11 @@
             <p>&copy; 2024 Mi Sitio Web Responsivo. Todos los derechos reservados. Nota cómo el pie de página utiliza la fuente Courier New para un aspecto distintivo.</p>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
 </body>
 </html>

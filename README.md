@@ -74,4 +74,4 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir cambi
 
 ---
 
-Creado con ❤️ por Purple-Code-sh
+Creado con 💜 por Purple-Code-sh

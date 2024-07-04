@@ -38,16 +38,26 @@ Este repositorio contiene ejemplos de implementación de un diseño web responsi
 
 ### React (JSX) y React con TypeScript (TSX)
 1. Asegúrate de tener Node.js y npm instalados
-2. Navega a la carpeta correspondiente (`/react-jsx/` o `/react-tsx/`)
-3. Instala las dependencias:
+2. Crea una aplicación de React o React con TypeScript si aún no lo has hecho. Puedes usar 
+   ```
+   npm create vite@latest
+   ```
+   O también
+   ```
+   npx create-react-app my-app
+   ```
+3. Navega a la carpeta correspondiente donde creaste tu aplicación
+4. Instala las dependencias si aún no lo has hecho:
    ```
    npm install
    ```
-4. Inicia el servidor de desarrollo:
+5. Reemplaza el contenido de App.tsx o App.jsx según corresponda
+6. Reemplaza el contenido de App.css
+7. Inicia el servidor de desarrollo:
    ```
    npm start
    ```
-5. Abre `http://localhost:3000` en tu navegador
+8. Abre `http://localhost:3000` en tu navegador
 
 ## Personalización
 

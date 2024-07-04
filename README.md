@@ -2,22 +2,6 @@
 
 Este repositorio contiene ejemplos de implementación de un diseño web responsivo utilizando HTML puro, React (JSX) y React con TypeScript (TSX). Cada ejemplo está acompañado de los estilos CSS correspondientes.
 
-## Estructura del Proyecto
-
-```
-.
-├── html/
-│   ├── index.html
-│   └── styles.css
-├── react-jsx/
-│   ├── App.js
-│   └── App.css
-├── react-tsx/
-│   ├── App.tsx
-│   └── App.css
-└── README.md
-```
-
 ## Ejemplos Incluidos
 
 ### 1. HTML Puro
